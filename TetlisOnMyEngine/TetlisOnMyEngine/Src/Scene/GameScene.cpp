@@ -4,31 +4,12 @@
 
 GameScene::GameScene()
 {
-
+	m_myScene = SceneKind::GAME;
 }
 
 GameScene::~GameScene()
 {
 
-}
-
-SceneKind GameScene::Main()
-{
-	switch (current_step)
-	{
-	case StepKind::INIT:
-		Init();
-		break;
-
-	case StepKind::RUN:
-		Run();
-		break;
-
-	case StepKind::FINISH:
-		return Finish();
-		break;
-	}
-	return SceneKind::GAME;
 }
 
 void GameScene::Draw()

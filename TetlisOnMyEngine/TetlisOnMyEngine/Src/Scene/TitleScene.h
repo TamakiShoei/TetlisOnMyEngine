@@ -9,7 +9,6 @@ public:
 	TitleScene();
 	~TitleScene();
 
-	SceneKind Main() override;
 	void Draw() override;
 
 	void Init() override;

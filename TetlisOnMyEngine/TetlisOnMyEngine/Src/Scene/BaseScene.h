@@ -9,7 +9,7 @@ public:
 	BaseScene();
 	virtual ~BaseScene();
 
-	virtual SceneKind Main() = 0;
+	virtual SceneKind Main();
 	virtual void Draw() = 0;
 	virtual SceneKind GetKind() = 0;
 
@@ -20,6 +20,9 @@ protected:
 
 protected:
 	StepKind current_step;
+	SceneKind m_myScene;
+
+
 };
 
 #endif

@@ -9,7 +9,6 @@ public:
 	GameScene();
 	~GameScene();
 
-	SceneKind Main() override;
 	void Draw() override;
 
 	void Init() override;

@@ -1,19 +1,19 @@
 #include "Pipeline.h"
 
-Pipeline::Pipeline() : pipeline(nullptr)
+Pipeline::Pipeline() : instance(nullptr)
 {
 
 }
 
 Pipeline::~Pipeline()
 {
-	if (pipeline != nullptr)
+	if (instance != nullptr)
 	{
-		pipeline->Release();
+		instance->Release();
 	}
 }
 
-bool Pipeline::Initialize(ComPtr<ID3D12Device> device, ComPtr<ID3D12RootSignature> rootSignature)
+bool Pipeline::Initialize(ComPtr<ID3D12Device> device, ComPtr<ID3D12RootSignature> root_signature)
 {
 	ID3DBlob* vsBlob;
 	ID3DBlob* psBlob;
@@ -65,7 +65,7 @@ bool Pipeline::Initialize(ComPtr<ID3D12Device> device, ComPtr<ID3D12RootSignatur
 	renderTargetBlendDesc.RenderTargetWriteMask = D3D12_COLOR_WRITE_ENABLE_ALL;
 
 	D3D12_GRAPHICS_PIPELINE_STATE_DESC graphicsPipeline = {};
-	graphicsPipeline.pRootSignature = rootSignature.Get();
+	graphicsPipeline.pRootSignature = root_signature.Get();
 	graphicsPipeline.VS.pShaderBytecode = vsBlob->GetBufferPointer();
 	graphicsPipeline.VS.BytecodeLength = vsBlob->GetBufferSize();
 	graphicsPipeline.PS.pShaderBytecode = psBlob->GetBufferPointer();
@@ -89,7 +89,7 @@ bool Pipeline::Initialize(ComPtr<ID3D12Device> device, ComPtr<ID3D12RootSignatur
 	graphicsPipeline.SampleDesc.Quality = 0;
 
 	if (FAILED(device->CreateGraphicsPipelineState(
-		&graphicsPipeline, IID_PPV_ARGS(pipeline.GetAddressOf()))))
+		&graphicsPipeline, IID_PPV_ARGS(instance.GetAddressOf()))))
 	{
 		return false;
 	}
@@ -99,5 +99,5 @@ bool Pipeline::Initialize(ComPtr<ID3D12Device> device, ComPtr<ID3D12RootSignatur
 
 void Pipeline::Finalize()
 {
-	pipeline->Release();
+	instance->Release();
 }

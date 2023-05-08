@@ -3,31 +3,12 @@
 
 TitleScene::TitleScene()
 {
-
+	m_myScene = SceneKind::TITLE;
 }
 
 TitleScene::~TitleScene()
 {
 
-}
-
-SceneKind TitleScene::Main()
-{
-	switch (current_step)
-	{
-	case StepKind::INIT:
-		Init();
-		break;
-
-	case StepKind::RUN:
-		Run();
-		break;
-
-	case StepKind::FINISH:
-		return Finish();
-		break;
-	}
-	return SceneKind::TITLE;
 }
 
 void TitleScene::Draw()
