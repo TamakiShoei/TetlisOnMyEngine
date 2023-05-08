@@ -72,9 +72,6 @@
     <ClCompile Include="Engine\Graphics\CommandQueue\CommandQueue.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Graphics\DescriptorHeap\DescriptorHeap.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Graphics\Device\Device.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
@@ -100,6 +97,9 @@
       <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Window.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Graphics\DescriptorHeap\BasicDescHeap.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -167,9 +167,6 @@
     <ClInclude Include="Engine\Graphics\CommandQueue\CommandQueue.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Graphics\DescriptorHeap\DescriptorHeap.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Graphics\Device\Device.h">
       <Filter>Engine</Filter>
     </ClInclude>
@@ -198,6 +195,9 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Window.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Graphics\DescriptorHeap\BasicDescHeap.h">
       <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>

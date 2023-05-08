@@ -28,7 +28,7 @@
     <ClCompile Include="Engine\Graphics\CommandAllocator\CommandAllocator.cpp" />
     <ClCompile Include="Engine\Graphics\CommandList\CommandList.cpp" />
     <ClCompile Include="Engine\Graphics\CommandQueue\CommandQueue.cpp" />
-    <ClCompile Include="Engine\Graphics\DescriptorHeap\DescriptorHeap.cpp" />
+    <ClCompile Include="Engine\Graphics\DescriptorHeap\BasicDescHeap.cpp" />
     <ClCompile Include="Engine\Graphics\Device\Device.cpp" />
     <ClCompile Include="Engine\Graphics\Factory\Factory.cpp" />
     <ClCompile Include="Engine\Graphics\Fence\Fence.cpp" />
@@ -60,7 +60,7 @@
     <ClInclude Include="Engine\Graphics\CommandAllocator\CommandAllocator.h" />
     <ClInclude Include="Engine\Graphics\CommandList\CommandList.h" />
     <ClInclude Include="Engine\Graphics\CommandQueue\CommandQueue.h" />
-    <ClInclude Include="Engine\Graphics\DescriptorHeap\DescriptorHeap.h" />
+    <ClInclude Include="Engine\Graphics\DescriptorHeap\BasicDescHeap.h" />
     <ClInclude Include="Engine\Graphics\Device\Device.h" />
     <ClInclude Include="Engine\Graphics\Factory\Factory.h" />
     <ClInclude Include="Engine\Graphics\Fence\Fence.h" />
@@ -154,11 +154,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\DirectXTex-main\DirectXTex-main\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -170,13 +171,14 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\DirectXTex-main\DirectXTex-main\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -203,13 +205,14 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\DirectXTex-main\DirectXTex-main\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\DirectXTex-master\DirectXTex-master\DirectXTex\Bin\Desktop_2022_Win10\x64\Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
